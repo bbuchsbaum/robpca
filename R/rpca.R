@@ -7,10 +7,6 @@ rpca_alm <- function(M, tol=1e-6) {
 
   inf_norm <- max(abs(M))
 
-  if (is.null(gamma)) {
-    gamma = 1/sqrt(max(mdim))
-  }
-
   mu <- prod(mdim) / (4.0 * sum(abs(M)))
   lamb <- max(mdim)^(-.5)
 
