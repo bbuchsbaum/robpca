@@ -2,13 +2,9 @@
 
 rpca_alm <- function(M, tol=1e-6) {
   mdim <- dim(M)
-  Frob_norm <- norm(M,"F")
-  two_norm <- norm(M,"2")
-
-  inf_norm <- max(abs(M))
 
   mu <- prod(mdim) / (4.0 * sum(abs(M)))
-  lamb <- max(mdim)^(-.5)
+  lamb <- 1/sqrt(max(mdim))
 
   L <- matrix(0, dim(M))
   S <- matrix(0, dim(M))
